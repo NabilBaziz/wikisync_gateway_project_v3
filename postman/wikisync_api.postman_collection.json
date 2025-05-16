@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "WikiSync API Gateway",
+    "_postman_id": "1d857b5e-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "description": "Collection for testing WikiSync API Gateway",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Wiki Pages",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/wikisync/pages",
+          "host": ["{{base_url}}"],
+          "path": ["api", "wikisync", "pages"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "https://gateway.example.com" },
+    { "key": "token", "value": "" }
+  ]
+}
